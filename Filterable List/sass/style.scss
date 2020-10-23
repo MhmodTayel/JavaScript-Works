@@ -19,25 +19,30 @@
 }
 ul li {
   list-style: none;
+
 }
 .col-header {
   border: 1px solid rgba(110, 110, 110, 0.644);
+  
   width: 100%;
   padding: 10px 15px;
   font-weight: 100;
   border-radius: 2px;
-  border-bottom-color: transparent;
+  margin-top: -1px;
   h5 {
     color: rgba(51, 51, 51, 0.747);
     font-size: 1.4rem;
   }
 }
 
+
 .col-item {
   border: 1px solid rgba(110, 110, 110, 0.644);
   width: 100%;
   padding: 5px 10px;
-
+  border-radius: 2px;
+  margin-top: -1px;
+  
   a {
     margin-left: 15px;
     text-decoration: none;
@@ -45,9 +50,8 @@ ul li {
   }
 }
 
-.col-item:not(:last-child) {
-  border-bottom-color: transparent;
-}
+
+
 
 input[type="text"] {
   width: 100%;
@@ -59,6 +63,10 @@ input[type="text"] {
   padding-bottom: 5px;
   outline: none;
 
+  &:focus-within {
+    border-bottom: 2px solid rgba(52, 133, 170, 0.685);
+  }
+  
   &::placeholder {
     font-size: 1rem;
   }
