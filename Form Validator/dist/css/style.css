@@ -36,6 +36,7 @@ body {
   border: 2px solid #3498db;
   border-radius: 4px;
   color: #fff;
+  outline: none;
   display: block;
   font-size: 16px;
   padding: 10px;
