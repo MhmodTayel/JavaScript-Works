@@ -113,3 +113,7 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+p.text span:not(:last-child) {
+  margin: 0 5px;
+}
