@@ -59,7 +59,18 @@ function clearTasks(e) {
   }
 }
 
+function filterTasks(e) {
+  const text = e.target.value.toLowerCase();
 
+  document.querySelectorAll(".collection-item").forEach((task) => {
+    const item = task.firstChild.textContent;
+    if (item.toLowerCase().indexOf(text) != -1) {
+      task.style.display = "flex";
+    } else {
+      task.style.display = "none";
+    }
+  });
+}
 
 function closeWarning() {
   warning.classList.remove("active");
