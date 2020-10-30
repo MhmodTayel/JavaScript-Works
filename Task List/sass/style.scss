@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +9,57 @@
 
 body {
   background: #fff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-   font-family: 'Lato',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   width: 50%;
   display: flex;
   flex-direction: column;
+  min-width: 500px;
 }
 
+.warning {
+  position: relative;
+  background: #ffd48a;
+  font-family: "Quicksand";
+  padding: 10px;
+  color: #000;
+  border-radius: 2px;
+  margin: 10px 0;
+  font-weight: 100;
+  border-left: 5px solid darken($color: #ffd48a, $amount: 50);
+  box-shadow:0 2px 5px rgba($color: #000000, $alpha: 0.3);
+  transition: .2s;
+   h3 {
+    font-size: 14px;
+  }
+
+  .close{
+    position:absolute;
+    width:20px;
+    height:20px;
+    opacity:0.5;
+    border-width:1px;
+    border-style:solid;
+    border-radius:50%;
+    right:10px;
+    top:8px;
+    line-height: 15px;
+    text-align:center;
+    font-size:20px;
+    cursor:pointer;
+  }
+
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 .btn {
   background: #0275d8;
   border: none;
@@ -28,31 +68,31 @@ body {
   font-size: 16px;
   color: #fff;
   margin: 20px 0;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   display: inline-block;
-  box-shadow: 0 2px 5px rgba($color: #000000, $alpha: .3);
+  box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.3);
 
   &:hover {
-    filter: brightness(.8);
+    filter: brightness(0.8);
   }
 
   &-danger {
     background: #d9534f;
   }
-
 }
 
 .card {
   padding: 20px;
-  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: .3);
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
   .card-content {
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
     .card-title {
       font-size: 24px;
-      filter: opacity(.8);
+      filter: opacity(0.8);
     }
   }
 
@@ -67,13 +107,13 @@ body {
       outline: none;
       border: none;
       border-bottom: 2px solid #ccc;
-      transition: .2s;
+      transition: 0.2s;
 
       &:focus {
         border-bottom-color: #0275d8;
       }
 
-      &::placeholder{
+      &::placeholder {
         font-size: 14px;
       }
     }
@@ -83,8 +123,7 @@ body {
 .card-action {
   #task-title {
     font-size: 18px;
-    filter: opacity(.7);
+    filter: opacity(0.7);
     margin-top: 20px;
   }
 }
-

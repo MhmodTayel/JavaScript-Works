@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +12,53 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   width: 50%;
   display: flex;
   flex-direction: column;
+  min-width: 500px;
+}
+
+.warning {
+  position: relative;
+  background: #ffd48a;
+  font-family: "Quicksand";
+  padding: 10px;
+  color: #000;
+  border-radius: 2px;
+  margin: 10px 0;
+  font-weight: 100;
+  border-left: 5px solid #8a5700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: .2s;
+  display: none;
+}
+
+.warning h3 {
+  font-size: 14px;
+}
+
+.warning .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  right: 10px;
+  top: 8px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.warning.active {
+  display: block;
 }
 
 .btn {
@@ -28,9 +69,10 @@ body {
   font-size: 16px;
   color: #fff;
   margin: 20px 0;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
   display: inline-block;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -71,7 +113,7 @@ body {
   outline: none;
   border: none;
   border-bottom: 2px solid #ccc;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .card .input-field input:focus {
