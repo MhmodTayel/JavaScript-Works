@@ -127,3 +127,22 @@ body {
     margin-top: 20px;
   }
 }
+
+ul {
+  margin-top: 20px;
+  li {
+    list-style: none;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    
+    a{
+      // margin-right: 10px;
+      cursor: pointer;
+      color: #d9534f;
+    }
+  }
+}
