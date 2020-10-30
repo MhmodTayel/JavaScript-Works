@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9a00dfd817.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title">Task List</span>
+              <div class="row">
+                <form id="task-form">
+                  <div class="input-field">
+                    <input type="text" name="task" id="task" placeholder="New Task" />
+                  </div>
+                  <input type="submit" value="Add Task" class="btn" />
+                </form>
+              </div>
+            </div>
+            <div class="card-action">
+              <h5 id="task-title">Tasks</h5>
+              <div class="input-field">
+                <input type="text" name="filter" id="filter" placeholder="Filter Task" />
+              </div>
+              <ul class="collection">
+                <a href="#" class="clear-tasks btn btn-danger">Clear Tasks</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>
