@@ -5,6 +5,7 @@ const filter = document.querySelector("#filter");
 const taskInput = document.querySelector("#task");
 const warning = document.querySelector(".warning");
 const close = document.querySelector(".close");
+const popUp = document.querySelector(".delete");
 
 loadEventListeners();
 
@@ -122,13 +123,13 @@ function removeTaskFromLocalStorage(taskItem) {
 }
 
 function clearTasks() {
-  if (confirm("Do you want to delete all tasks ?")) {
-    while (taskList.firstChild) {
-      taskList.removeChild(taskList.firstChild);
-    }
-
-    clearTasksFromLocalStorage();
+  popUp.style.visibility = "visible";
+  popUp.style.opacity = "1";
+  while (taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
   }
+
+  clearTasksFromLocalStorage();
 }
 
 function clearTasksFromLocalStorage() {

@@ -146,3 +146,37 @@ ul {
     }
   }
 }
+
+.delete {
+    border-radius: 5px;
+    position: fixed;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 250px;
+    padding: 50px 0;
+    background: #fff;
+    z-index: 1000000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    box-shadow: 0 0 0 100vh rgba(#000,.5),;
+    box-shadow: 0 0 0 100vw rgba(#000,.5),;
+    z-index: 100;
+    color: rgb(104, 104, 104);
+    text-align: center;
+    i {
+      font-size: 3rem;
+      margin-top: -100px;
+      margin-bottom: 10px;
+      color: #d9534f;
+    }
+
+    .btn {
+      display: inline-block;
+      margin:30px 20px;
+    }
+
+}
