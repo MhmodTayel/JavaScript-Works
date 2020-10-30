@@ -128,8 +128,12 @@ body {
   }
 }
 
+
 ul {
   margin-top: 20px;
+  overflow:hidden;
+   overflow-y:scroll;
+  height: 250px;
   li {
     list-style: none;
     padding: 10px 20px;
@@ -179,4 +183,24 @@ ul {
       margin:30px 20px;
     }
 
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0275d8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #035094;
 }

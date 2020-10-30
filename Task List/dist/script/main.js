@@ -6,6 +6,8 @@ const taskInput = document.querySelector("#task");
 const warning = document.querySelector(".warning");
 const close = document.querySelector(".close");
 const popUp = document.querySelector(".delete");
+const popUpCancel = document.querySelector(".popUpCancel");
+const btnDelete = document.querySelector(".btnDelete");
 
 loadEventListeners();
 
@@ -97,12 +99,23 @@ function storeTaskInLocalStorage(task) {
 
 function deleteItem(e) {
   if (e.target.parentElement.classList.contains("delete-item")) {
-    if (confirm("Do you want to delete this Task")) {
+    popUp.style.visibility = "visible";
+  popUp.style.opacity = "1";
+
+  popUpCancel.addEventListener("click", () => {
+    popUp.style.visibility = "hidden";
+    popUp.style.opacity = "0";
+  });
+
+  btnDelete.addEventListener('click', ()=> {
+    popUp.style.visibility = "hidden";
+    popUp.style.opacity = "0";
       e.target.parentElement.parentElement.remove();
 
       // remove task from Local Storage
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
-    }
+  })
+    
   }
 }
 
@@ -125,11 +138,23 @@ function removeTaskFromLocalStorage(taskItem) {
 function clearTasks() {
   popUp.style.visibility = "visible";
   popUp.style.opacity = "1";
-  while (taskList.firstChild) {
-    taskList.removeChild(taskList.firstChild);
-  }
 
-  clearTasksFromLocalStorage();
+  popUpCancel.addEventListener("click", () => {
+    popUp.style.visibility = "hidden";
+    popUp.style.opacity = "0";
+  });
+
+  btnDelete.addEventListener('click', ()=> {
+    while (taskList.firstChild) {
+      taskList.removeChild(taskList.firstChild);
+    }
+    clearTasksFromLocalStorage();
+    popUp.style.visibility = "hidden";
+    popUp.style.opacity = "0";
+    
+  })
+
+
 }
 
 function clearTasksFromLocalStorage() {
@@ -147,6 +172,8 @@ function filterTasks(e) {
       task.style.display = "none";
     }
   });
+
+
 }
 
 function closeWarning() {
