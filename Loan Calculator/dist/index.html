@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9a00dfd817.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Loan Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan Calculator</h1>
+      <form id="loan-form">
+        <div class="input-group">
+          <span class="symbol">$</span>
+          <input type="number" placeholder="Loan Amount" id="amount" />
+        </div>
+        <div class="input-group">
+          <span class="symbol">%</span>
+          <input type="number" placeholder="Interest" id="interest" />
+        </div>
+        <div class="input-group">
+          <input type="number" placeholder="Years To Repay" id="years" />
+        </div>
+        <input type="submit" class="btn btn-dark" value="Calculate" />
+      </form>
+      <!-- Loader Here -->
+      <!-- Results -->
+    </div>
+    <script src="script/main.js"></script>
+  </body>
+</html>
