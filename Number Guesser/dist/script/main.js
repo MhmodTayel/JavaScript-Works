@@ -22,8 +22,22 @@ guessBtn.addEventListener("click", () => {
 
   if (guess === winningNum) {
     guessInput.disabled = true;
-    setMessage(`${winningNum} is CORRECT!`, "rgba(15, 207, 15, 1)");
+    guessInput.style.borderColor = "rgba(15, 207, 15, 0.678)";
+    setMessage(`${winningNum} is correct, YOU WIN!`, "rgba(15, 207, 15, 1)");
   } else {
+    guessesLeft--;
+    if (guessesLeft === 0) {
+      guessInput.disabled = true;
+      guessInput.style.borderColor = "red";
+      setMessage(
+        `Game Over, you lost. The correct number was ${winningNum}`,
+        "red"
+      );
+    } else {
+      guessInput.style.borderColor = "red";
+      setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+      guessInput.value = '';
+    }
   }
 });
 
