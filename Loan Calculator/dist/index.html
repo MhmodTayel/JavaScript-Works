@@ -28,7 +28,30 @@
         <input type="submit" class="btn btn-dark" value="Calculate" />
       </form>
       <!-- Loader Here -->
+      <!-- <div class="loader" id="loader">
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+      </div> -->
       <!-- Results -->
+      <div id="results" class="results">
+        <h5>Results</h5>
+        <div class="input-group">
+          <span class="symbol">Monthly Payment</span>
+          <input type="number" id="monthly-payment" disabled />
+        </div>
+        <div class="input-group">
+          <span class="symbol">Total Payment</span>
+          <input type="number" id="total-payment" disabled />
+        </div>
+        <div class="input-group">
+          <span class="symbol">Total Interest</span>
+          <input type="number" id="total-interest" disabled />
+        </div>
+      </div>
     </div>
     <script src="script/main.js"></script>
   </body>
