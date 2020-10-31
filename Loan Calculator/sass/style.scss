@@ -88,7 +88,8 @@ body {
 }
 
 .loader {
-  margin-top: 35px;
+  margin: 50px 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +99,7 @@ body {
   height: 21px;
   background-color: #262626;
   margin-right: 10px;
-  animation: animate 1s linear infinite;
+  animation: animate .8s linear infinite;
   
 }
 
@@ -156,4 +157,8 @@ body {
   &-danger {
     background-color: #d9544f3d;
   }
+}
+
+#loader,.results {
+  display: none;
 }
