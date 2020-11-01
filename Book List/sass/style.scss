@@ -9,11 +9,21 @@
 body {
   background: #fff;
   font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  border-top: 2px solid #ccc;
+  margin: 50px 0;
 }
 
 .container {
   margin: 10px 50px;
   text-align: center;
+  width: 50%;
+  min-width: 600px;
+
 
   .heading {
     margin-top: 20px;
@@ -42,5 +52,42 @@ body {
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 18px;
+  }
+
+  .btn {
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+table {
+  // border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+
+  td, th:not(:last-child) {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border-radius: 2px;
+  }
+}
+
+.alert {
+  color: #fff;
+  padding: 5px ;
+  margin: 5px 0 15px 0;
+  &-success {
+    background-color: green;
+  }
+  &-error {
+    background-color: red;
   }
 }

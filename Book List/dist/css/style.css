@@ -8,11 +8,20 @@
 body {
   background: #fff;
   font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  border-top: 2px solid #ccc;
+  margin: 50px 0;
 }
 
 .container {
   margin: 10px 50px;
   text-align: center;
+  width: 50%;
+  min-width: 600px;
 }
 
 .container .heading {
@@ -42,4 +51,44 @@ body {
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 18px;
+}
+
+.input-field .btn {
+  background-color: transparent;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.input-field .btn:hover {
+  transform: translateY(-1px);
+}
+
+.input-field .btn:active {
+  transform: translateY(1px);
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+table td, table th:not(:last-child) {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+.alert {
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-error {
+  background-color: red;
 }
