@@ -67,3 +67,10 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
 
   e.preventDefault();
 });
+
+document.querySelector(".table").addEventListener("click", (e) => {
+  if (e.target.parentElement.className === "delete") {
+    e.target.parentElement.parentElement.parentElement.remove();
+    
+  }
+});

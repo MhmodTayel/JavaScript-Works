@@ -13,10 +13,6 @@ body {
   justify-content: center;
 }
 
-hr {
-  border-top: 2px solid #ccc;
-  margin: 50px 0;
-}
 
 .container {
   margin: 10px 50px;
@@ -58,6 +54,7 @@ hr {
     background-color: transparent;
     cursor: pointer;
     transition: .2s;
+    margin-top: 30px;
     &:hover {
       transform: translateY(-1px);
     }
@@ -104,6 +101,11 @@ table {
   td:last-child {
     text-align: center;
   }
+
+  tbody {
+    overflow-y: scroll;
+    overflow: hidden;
+  }
 }
 
 .alert {
@@ -112,6 +114,10 @@ table {
   margin: 5px 0 15px 0;
   border-radius: 2px;
   padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
   &-success {
     background-color: green;
   }
