@@ -67,6 +67,23 @@ hr {
   transform: translateY(1px);
 }
 
+.delete {
+  color: red;
+  text-decoration: none;
+  transition: .2s;
+  transition: .5s;
+}
+
+.delete i {
+  transition: .5s;
+  font-size: 18px;
+}
+
+.delete i:hover {
+  transition: .5s;
+  transform: rotate(180deg);
+}
+
 table {
   margin-top: 20px;
   width: 100%;
@@ -77,6 +94,15 @@ table td, table th:not(:last-child) {
   text-align: left;
   padding: 8px;
   border-radius: 2px;
+}
+
+table th:last-child {
+  border-bottom: 1px solid #dddddd;
+  text-align: right;
+}
+
+table td:last-child {
+  text-align: center;
 }
 
 .alert {

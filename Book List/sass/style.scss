@@ -67,6 +67,23 @@ hr {
   }
 }
 
+.delete {
+  color: red;
+  text-decoration: none;
+  transition: .2s;
+  // padding: 5px 15px;
+  transition: .5s;
+
+  i {
+    transition: .5s;
+    font-size: 18px;
+    &:hover {
+      transition: .5s;
+      transform: rotate(180deg);
+    } 
+}
+
+}
 table {
   // border-collapse: collapse;
   margin-top: 20px;
@@ -77,6 +94,15 @@ table {
     text-align: left;
     padding: 8px;
     border-radius: 2px;
+  }
+
+  th:last-child{
+    border-bottom: 1px solid #dddddd;
+    text-align: right;
+  }
+
+  td:last-child {
+    text-align: center;
   }
 }
 
