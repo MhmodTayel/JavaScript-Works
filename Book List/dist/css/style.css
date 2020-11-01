@@ -101,11 +101,6 @@ table td:last-child {
   text-align: center;
 }
 
-table tbody {
-  overflow-y: scroll;
-  overflow: hidden;
-}
-
 .alert {
   color: #fff;
   padding: 5px;

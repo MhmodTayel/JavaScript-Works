@@ -22,6 +22,7 @@ UI.prototype.addBookToList = (book) => {
   list.appendChild(row);
 };
 
+
 UI.prototype.clearFields = () => {
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
