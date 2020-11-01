@@ -109,6 +109,8 @@ table td:last-child {
   color: #fff;
   padding: 5px;
   margin: 5px 0 15px 0;
+  border-radius: 2px;
+  padding: 10px;
 }
 
 .alert-success {
