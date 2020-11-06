@@ -8,27 +8,32 @@
 <title>Credit Card Details Form</title>
 </head>
 <body>
-  <!-- Credit Card Box -->
+  <div class="container">
+      <!-- Credit Card Box -->
+<div class="container-card"></div>
+<!--                 -->
+<div class="container-form">
+<form class="form" autocomplete="off" novalidate>
+  <fieldset class="card-number">
+    <label for="card-number">Card Number</label>
+    <div class="input-field">
+      <input type="number" id="card-number-1" class="input-cart-number" maxlength="4" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+      <input type="number" id="card-number-2" class="input-cart-number" maxlength="4" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+      <input type="number" id="card-number-3" class="input-cart-number" maxlength="4" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+      <input type="number" id="card-number-4" class="input-cart-number" maxlength="4" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+    </div>
 
-  <!--                 -->
+  </fieldset>
 
-  <form class="form" autocomplete="off" novalidate>
-    <fieldset>
-      <label for="card-number">Card Number</label>
-      <input type="number" id="card-number-1" class="input-cart-number" maxlength="4">
-      <input type="number" id="card-number-2" class="input-cart-number" maxlength="4">
-      <input type="number" id="card-number-3" class="input-cart-number" maxlength="4">
-      <input type="number" id="card-number-4" class="input-cart-number" maxlength="4">
-    </fieldset>
+  <fieldset>
+    <label for="card-holder">Card holder</label>
+    <input type="text" id="card-holder" />
+  </fieldset>  
 
-    <fieldset>
-      <label for="card-holder">Card holder</label>
-      <input type="text" id="card-holder" />
-    </fieldset>  
-
-
-    <fieldset class="card-expire">
-      <label for="expire-month">Expire date</label>
+<div class="expire-ccv">
+  <fieldset class="card-expire">
+    <label for="expire-month">Expire date</label>
+    <div class="select-input">
       <div class="select">
         <select id="expire-month">
           <option></option>
@@ -61,15 +66,23 @@
           <option>2029</option>
         </select>
       </div>
-    </fieldset>
+    </div>
 
-    <fieldset class="fieldset-ccv">
-      <label for="card-ccv">CCV</label>
-      <input type="text" id="card-ccv" maxlength="3" />
-    </fieldset>
-    <button class="btn"><i class="fa fa-lock"></i> submit</button>
-    
-  </form>
+  </fieldset>
+
+  <fieldset class="fieldset-ccv">
+    <label for="card-ccv">CCV</label>
+    <input type="text" id="card-ccv" maxlength="3" />
+  </fieldset>
+</div>
+
+  <button class="btn"><i class="fa fa-lock"></i> submit</button>
+
+</form>
+</div>
+
+  </div>
+
 
  
 <script src="script/main.js"></script>
