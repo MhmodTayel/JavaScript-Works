@@ -7,16 +7,18 @@
 
 body {
   font-family: "Questrial", sans-serif;
-  background: #666;
+  background: linear-gradient(rgb(21, 220, 235),rgb(13, 153, 218));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
   color: #fff;
+  margin-top: -10px;
 }
 
 .screen {
@@ -25,6 +27,8 @@ h1 {
   background-color: #000 !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 14px 13px 45px -6px rgba(0,0,0,0.68);
+
 }
 
 .controls {
@@ -96,7 +100,6 @@ h1 {
   background: #4CAF50;
   cursor: pointer;
 }
-
 
 
 
