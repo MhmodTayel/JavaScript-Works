@@ -55,6 +55,30 @@ body {
     position: absolute;
     top: -10px;
     left: -10px;
+  }
+  .pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: animate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+    .pointer {
+      background: #fff;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      display: block;
+    }
+  }
+}
 
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
