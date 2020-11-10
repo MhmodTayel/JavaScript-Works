@@ -39,7 +39,6 @@ body {
 }
 
 .container .gradient-circle {
-  background: conic-gradient(#55b7a4 0%, #4ca493 40%, #fff 40%, #fff 60%, #336d62 60%, #2a5b52 100%);
   height: 320px;
   width: 320px;
   z-index: -2;
@@ -47,6 +46,19 @@ body {
   position: absolute;
   top: -10px;
   left: -10px;
+  background: conic-gradient(#55b7a4 0%, #4ca493 40%, #fff 40%, #fff 60%, #336d62 60%, #2a5b52 100%);
+}
+
+.container .gradient-circle.breatheIn {
+  background: conic-gradient(#55b7a4 0%, #4ca493 40%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(42, 91, 82, 0.5) 60%, rgba(42, 91, 82, 0.5) 100%);
+}
+
+.container .gradient-circle.hold {
+  background: conic-gradient(rgba(85, 183, 164, 0.5) 0%, rgba(85, 183, 164, 0.5) 40%, #fff 40%, #fff 60%, rgba(42, 91, 82, 0.5) 60%, rgba(42, 91, 82, 0.5) 100%);
+}
+
+.container .gradient-circle.breatheOut {
+  background: conic-gradient(rgba(85, 183, 164, 0.5) 0%, rgba(85, 183, 164, 0.5) 40%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.5) 60%, #55b7a4 60%, #55b7a4 100%);
 }
 
 .container .pointer-container {
@@ -67,11 +79,37 @@ body {
   display: block;
 }
 
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
 @keyframes animate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
