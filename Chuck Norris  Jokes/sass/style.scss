@@ -64,12 +64,14 @@ form {
 
 ul {
   margin-top: 20px;
-  width: 400px;
-  background-color: rgb(245, 243, 243);
+  width: 500px;
+
   list-style: none;
   border-radius: 3px;
   li {
     margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(245, 243, 243);
     &:last-child {
       margin-bottom: 10px;
     }

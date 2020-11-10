@@ -67,14 +67,15 @@ form .get-jokes:active {
 
 ul {
   margin-top: 20px;
-  width: 400px;
-  background-color: #f5f3f3;
+  width: 500px;
   list-style: none;
   border-radius: 3px;
 }
 
 ul li {
   margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f3f3;
 }
 
 ul li:last-child {
