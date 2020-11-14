@@ -1,6 +1,7 @@
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
 const btn3 = document.getElementById("btn3");
+const outputUI = document.getElementById("output");
 
 btn1.addEventListener("click", getText);
 btn2.addEventListener("click", getJSON);
@@ -11,7 +12,7 @@ function getText() {
       return res.text();
     })
     .then((data) => {
-      console.log(data);
+      output.innerHTML = data;
     });
 }
 
@@ -21,7 +22,10 @@ function getJSON() {
       return res.json();
     })
     .then((data) => {
-      console.log(data.title);
-      console.log(data.body);
+      let output='';
+      data.forEach((post)=> {
+        output += `<li>${post.title}</li>`
+      })
+      outputUI.innerHTML = output;
     });
 }

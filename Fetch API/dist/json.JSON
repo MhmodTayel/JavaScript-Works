@@ -1,4 +1,16 @@
-{
-  "title": "Data Title",
+[{
+  "title": "Post One",
   "body": "This is some data from JSON File"
-}
+},
+{
+  "title": "Post Two",
+  "body": "This is some data from JSON File"
+},
+{
+  "title": "Post Three",
+  "body": "This is some data from JSON File"
+},
+{
+  "title": "Post Four",
+  "body": "This is some data from JSON File"
+}]
