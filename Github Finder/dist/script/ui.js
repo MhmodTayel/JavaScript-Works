@@ -34,4 +34,15 @@ class UI {
 <div id="repos"></div>
     `;
   }
+
+  clearProfile() {
+    this.profile.innerHTML = "";
+  }
+
+  showAlert() {
+    searchUser.className = "form-control alertUI";
+  }
+  deleteAlert() {
+    searchUser.className = "form-control ";
+  }
 }
