@@ -5,6 +5,7 @@ const outputUI = document.getElementById("output");
 
 btn1.addEventListener("click", getText);
 btn2.addEventListener("click", getJSON);
+btn3.addEventListener("click", getAPI);
 
 function getText() {
   fetch("text.txt")
@@ -22,10 +23,16 @@ function getJSON() {
       return res.json();
     })
     .then((data) => {
-      let output='';
-      data.forEach((post)=> {
-        output += `<li>${post.title}</li>`
-      })
+      let output = "";
+      data.forEach((post) => {
+        output += `<li>${post.title}</li>`;
+      });
       outputUI.innerHTML = output;
     });
+}
+
+function getAPI() {
+  fetch(`http://api.icndb.com/jokes/random`)
+    .then((response) => response.json())
+    .then((json) => outputUI.innerHTML =  json.value.joke);
 }
