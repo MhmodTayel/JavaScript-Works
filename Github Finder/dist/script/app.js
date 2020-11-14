@@ -8,19 +8,21 @@ searchUser.addEventListener("keyup", (e) => {
   const userText = e.target.value;
 
   if (userText != "") {
+    ui.deleteAlert();
     github.getUser(userText).then((data) => {
       if (data.profile.message === "Not Found" || userText === "alert") {
         // Show Alert
         ui.showAlert();
       } else {
         // Show Profile
-        console.log(data.profile);
         ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
         ui.deleteAlert();
       }
     });
   } else {
     // Clear Profile
     ui.clearProfile();
+    ui.deleteAlert();
   }
 });
