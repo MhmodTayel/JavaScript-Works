@@ -7,16 +7,13 @@
 body {
   background: #333;
   height: 100vh;
-
-
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .fill {
@@ -40,4 +37,17 @@ body {
   margin: 10px;
   border: 3px #ccc solid;
   background: #fff;
+}
+
+.hold {
+  border: solid 6px #fff;
+}
+
+.hoverd {
+  background-color: #f4f4f4;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
 }
