@@ -41,3 +41,32 @@ function hourGlassLoad() {
 }
 
 setInterval(hourGlassLoad, 3000);
+
+function diceLoad() {
+  let dice = document.getElementById('dice');
+
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-one'
+  },200)
+
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-two'
+  },400)
+
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-three'
+  },600)
+
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-four'
+  },800)
+
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-five'
+  },1000)
+  setTimeout(() => {
+    dice.className = 'fas fa-dice-six'
+  },1200)
+}
+
+setInterval(diceLoad,1200)
