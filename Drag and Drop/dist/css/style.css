@@ -42,9 +42,10 @@ body {
   border: solid 6px #fff;
 }
 
-.hoverd {
-  background-color: #f4f4f4;
+.hovered {
+  background-color: #ccc;
   border-style: dashed;
+  border-color: #f4f4f4;
 }
 
 .invisible {
