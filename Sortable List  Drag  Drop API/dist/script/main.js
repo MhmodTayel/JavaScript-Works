@@ -37,4 +37,58 @@ function createList() {
       listItems.push(listItem);
       draggableList.appendChild(listItem);
     });
+
+  addEventListeners();
+}
+
+
+
+
+function addEventListeners() {
+  const draggables = document.querySelectorAll('.draggable')
+  const dragListItems = document.querySelectorAll('.draggable-list li')
+  draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart',dragStart)
+  })
+  dragListItems.forEach(item => {
+    item.addEventListener('dragover',dragOver)
+    item.addEventListener('drop',dragDrop)
+    item.addEventListener('dragenter',dragEnter)
+    item.addEventListener('dragleave',dragLeave)
+  })
+}
+
+check.addEventListener("click", () => {
+  document.querySelector(".fa-paper-plane").style =
+    "animation: animate 1s linear forwards;";
+  setTimeout(() => {
+    document.querySelector(".fa-paper-plane").style = ";";
+  }, 1000);
+});
+
+
+
+function dragStart() {
+  
+}
+
+
+function dragEnter() {
+  this.classList.add('over')
+}
+
+
+function dragOver() {
+
+}
+
+
+function dragLeave() {
+ 
+  this.classList.remove('over')
+}
+
+
+function dragDrop() {
+
 }

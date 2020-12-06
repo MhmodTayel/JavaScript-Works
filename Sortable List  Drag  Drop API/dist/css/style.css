@@ -75,7 +75,6 @@ body {
   cursor: pointer;
   border-radius: 2px;
   outline: none;
-  transition: transform .2s;
 }
 
 .check-btn:active {
@@ -84,4 +83,16 @@ body {
 
 .check-btn .fas {
   margin-left: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes animate {
+  10% {
+    transform: translate(-5px, 10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, -50px);
+    opacity: 0;
+  }
 }
