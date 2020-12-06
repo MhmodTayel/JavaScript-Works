@@ -19,10 +19,10 @@ body {
   width: 90vw;
   div {
     &:nth-child(1) {
-      background-image: url("https://source.unsplash.com/user/erondu/1600x900");
+      background-image: url("https://source.unsplash.com/1600x900/?earth");
     }
     &:nth-child(2) {
-      background-image: url("https://source.unsplash.com/user/forest/1600x900");
+      background-image: url("https://source.unsplash.com/1600x900/?forest");
     }
     &:nth-child(3) {
       background-image: url("https://source.unsplash.com/1600x900/?beach");
@@ -55,6 +55,7 @@ body {
     bottom: 20px;
     left: 20px;
     opacity: 0;
+    transition: opacity .3s ease-in .4s;
   }
 
   &.active {
