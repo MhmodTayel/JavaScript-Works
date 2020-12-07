@@ -13,15 +13,24 @@ body {
 
 .container {
   background-color: #fafafa;
-  transition: transform 0.5s linear;
+  transition: transform .5s linear;
   width: 100vw;
   min-height: 100vh;
   padding: 50px;
+  transform-origin: top left;
 }
 
 .container.show-nav {
-  transform-origin: top left;
   transform: rotate(-20deg);
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
 }
 
 .circle-container {
@@ -49,6 +58,7 @@ body {
   font-size: 26px;
   color: #fff;
   outline: none;
+  cursor: pointer;
 }
 
 .circle-container .circle button#open {
@@ -102,6 +112,7 @@ nav ul li {
   margin: 40px 0;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
+  cursor: pointer;
 }
 
 nav ul li i {
