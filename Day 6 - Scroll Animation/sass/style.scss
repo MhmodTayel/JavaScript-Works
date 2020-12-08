@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   background-color: #efedd6;
   font-family: "Poppins";
+  overflow-x: hidden;
 }
 
 h1 {
@@ -27,16 +28,19 @@ h1 {
   align-items: center;
   margin: 10px;
   border-radius: 10px;
-  width: 400px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
   box-shadow: 2px 4px 5px rgba($color: #000, $alpha: 0.3);
-  transform: translateX(400%);
+  transform: translateX(600%);
   transition: transform 0.4s ease;
+  &:nth-of-type(even) {
+    transform: translateX(-600%);
+  }
   &.show {
     transform: translateX(0);
   }
 
-  &:nth-of-type(even) {
-    transform: translateX(-400%);
+  h2 {
+    font-size: 20px;
   }
 }
