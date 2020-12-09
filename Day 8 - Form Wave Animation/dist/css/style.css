@@ -48,6 +48,30 @@ body {
   outline: none;
 }
 
+.form-control input:focus, .form-control input:valid {
+  border-bottom-color: lightblue;
+}
+
+.form-control input:focus + label span, .form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+  font-size: 16px;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -59,7 +83,7 @@ body {
   border: 0;
   border-radius: 5px;
   outline: none;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .btn:active {
