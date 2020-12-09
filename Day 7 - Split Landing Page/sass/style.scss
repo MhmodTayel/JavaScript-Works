@@ -45,7 +45,7 @@ h1 {
     background: url("../img/ps.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    transition: 1s linear;
     &::before {
       content: "";
       position: absolute;
@@ -65,7 +65,7 @@ h1 {
     background: url("../img/xbox.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    transition: 1s linear;
     &::before {
       content: "";
       position: absolute;
@@ -74,7 +74,6 @@ h1 {
       background-color: $right-bg-color;
     }
 
-    
     & .btn:hover {
       background-color: $right-btn-color;
       border-color: $right-btn-color;
@@ -98,8 +97,28 @@ h1 {
   justify-content: center;
   font-weight: bold;
   text-transform: uppercase;
-  transition: .1s linear;
+  transition: 0.1s linear;
   &:active {
-    transform:  translate(-40%, -70%)translateY(2px);
+    transform: translate(-40%, -70%) translateY(2px);
+  }
+}
+
+.hover-left {
+  .left {
+    width: 75%;
+  }
+
+  .right {
+    width: 25%;
+  }
+}
+
+.hover-right {
+  .right {
+    width: 75%;
+  }
+
+  .left {
+    width: 25%;
   }
 }
