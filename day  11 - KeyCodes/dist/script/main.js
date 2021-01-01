@@ -14,6 +14,7 @@ function keyEmitter(e) {
  ${e.key === " " ? "Space" : e.key}
  <small>event.key</small>
 </div>
+
  <div class="key">
  ${e.keyCode}
     <small>event.keyCode</small>
@@ -24,4 +25,3 @@ function keyEmitter(e) {
 </div>
     `;
 }
-
