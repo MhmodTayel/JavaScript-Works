@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f9fafb;
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.container .form {
+  padding: 30px 40px;
+}
+
+.container .form h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.container .form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container .form button:hover {
+  background-color: #276d9c;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-control input::-webkit-input-placeholder {
+  color: rgba(156, 156, 156, 0.897);
+}
+
+.form-control input:-ms-input-placeholder {
+  color: rgba(156, 156, 156, 0.897);
+}
+
+.form-control input::-ms-input-placeholder {
+  color: rgba(156, 156, 156, 0.897);
+}
+
+.form-control input::placeholder {
+  color: rgba(156, 156, 156, 0.897);
+}
+
+.form-control input:focus {
+  border-color: #b9b9b9;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  color: #e74c3c;
+}
+/*# sourceMappingURL=style.css.map */
