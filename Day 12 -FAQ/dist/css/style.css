@@ -38,6 +38,14 @@ h1 {
   display: block;
 }
 
+.faq-container .faq.active button .fa-times {
+  display: block;
+}
+
+.faq-container .faq.active button .fa-chevron-circle-down {
+  display: none;
+}
+
 .faq-container .faq.active::before, .faq-container .faq.active::after {
   content: '\f075';
   font-family: 'Font Awesome 5 Free';
@@ -63,5 +71,26 @@ h1 {
 
 .faq-text {
   margin: 30px 0 0;
+  display: none;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  outline: none;
+}
+
+button .fa-times {
   display: none;
 }
