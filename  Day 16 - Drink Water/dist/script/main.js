@@ -3,6 +3,7 @@ const liters = document.getElementById("liters");
 const percentage = document.getElementById("percentage");
 const remained = document.getElementById("remained");
 
+updateBigCup();
 smallCups.forEach((cup, idx) => {
   cup.addEventListener("click", () => highlightCups(idx));
 });
@@ -10,7 +11,7 @@ smallCups.forEach((cup, idx) => {
 function highlightCups(idx) {
   if (
     smallCups[idx].classList.contains("full") &&
-    !smallCups[idx+1].classList.contains("full")
+    !smallCups[idx + 1].classList.contains("full")
   ) {
     idx--;
   }
@@ -21,4 +22,37 @@ function highlightCups(idx) {
       cup.classList.remove("full");
     }
   });
+  updateBigCup();
+}
+
+function updateBigCup() {
+  const fullCups = document.querySelectorAll(".cup-small.full").length;
+
+  const totalCups = smallCups.length;
+  if (fullCups === 0) {
+    percentage.style.visibility = "hidden";
+    percentage.style.height = 0;
+  } else {
+    percentage.style.visibility = "visible";
+    percentage.style.height = `${(fullCups / totalCups) * 330}px`;
+    percentage.innerText = `${(fullCups / totalCups) * 100}%`;
+  }
+
+  if (fullCups === 7) {
+    liters.style.fontSize = "18px";
+    remained.style.display = "inline";
+    document.querySelector("small").style.fontSize = "12px";
+  } else {
+    liters.style.fontSize = "30px";
+    remained.style.display = "flex";
+    document.querySelector("small").style.fontSize = "15px";
+  }
+
+  if (fullCups === totalCups) {
+    remained.style.visibility = "hidden";
+    remained.style.height = 0;
+  } else {
+    remained.style.visibility = "visible";
+    liters.innerText = `${2 - (250 * fullCups) / 1000}L`;
+  }
 }
