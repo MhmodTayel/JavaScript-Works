@@ -14,12 +14,39 @@ html {
 html.dark{
     $primary-color:#fff;
     $secondary-color: #222;
+    color: $primary-color;
+    background-color: #111;
+
+    .toggle {
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+
+    .clock { 
+
+        .needle { transition: background-color .5s ease-in;
+            background-color: #fff;
+
+            &.second {
+                background-color: #e74c3c;
+            }
+        }
+    }
+
+    .center-point {
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    .date {
+        .circle {
+            color: #222;
+            background-color: #fff;
+        }
+    }
 }
 
-html.dark {
-    background-color: #111;
-    color: $primary-color;
-}
 
 body {
     font-family: 'Heebo';
@@ -47,7 +74,8 @@ body {
     &:active {
         transform: scale(.98);
     }
-    display: none;
+
+    // display: none;
 }
 
 .clock-container {

@@ -8,8 +8,31 @@ html {
 }
 
 html.dark {
+  color: #fff;
   background-color: #111;
+}
+
+html.dark .toggle {
+  background-color: #fff;
   color: #222;
+}
+
+html.dark .clock .needle {
+  transition: background-color .5s ease-in;
+  background-color: #fff;
+}
+
+html.dark .clock .needle.second {
+  background-color: #e74c3c;
+}
+
+html.dark .center-point::after {
+  background-color: #fff;
+}
+
+html.dark .date .circle {
+  color: #222;
+  background-color: #fff;
 }
 
 body {
@@ -33,7 +56,6 @@ body {
   font-size: 18px;
   cursor: pointer;
   transition: .1s;
-  display: none;
 }
 
 .toggle:active {
