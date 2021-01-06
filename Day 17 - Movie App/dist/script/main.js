@@ -8,11 +8,13 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}
 
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const main = document.getElementById("main");
 
 async function getMovies(url) {
   const res = await fetch(url);
   const data = await res.json();
   console.log(data.results);
+  showMovies(data.results);
 }
 
 getMovies(API_URL);
@@ -27,3 +29,48 @@ form.addEventListener("submit", (e) => {
     window.location.reload();
   }
 });
+
+function showMovies(movies) {
+  main.innerHTML = "";
+  movies.forEach((movie) => {
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+    const movieInfo = document.createElement("div");
+    movieInfo.classList.add("movie-info");
+    const movieTitle = document.createElement("h3");
+    movieTitle.innerText = movie.original_title;
+    const movieRating = document.createElement("span");
+
+    if (movie.vote_average >= 7.5) {
+      movieRating.className = "green";
+    } else if (movie.vote_average < 7.5 && movie.vote_average >= 5) {
+      movieRating.className = "orange";
+    } else {
+      movieRating.className = "red";
+    }
+    movieRating.innerText = movie.vote_average;
+
+    const movieOverview = document.createElement("div");
+    movieOverview.className = "overview";
+    const overview = document.createElement("h3");
+    overview.innerText = "Overview";
+
+    let movieOverviewText = movie.overview;
+    if (movieOverviewText.length > 200) {
+      movieOverviewText = movieOverviewText.substring(0, 200);
+      movieOverviewText+=' ...'
+      console.log(movieOverviewText.length);
+    }
+
+    const movieImg = document.createElement("img");
+    movieImg.src = `${IMG_PATH}/${movie.poster_path}`;
+    main.appendChild(movieEl);
+    movieEl.appendChild(movieImg);
+    movieEl.appendChild(movieInfo);
+    movieInfo.appendChild(movieTitle);
+    movieInfo.appendChild(movieRating);
+    movieOverview.appendChild(overview);
+    movieOverview.innerHTML += movieOverviewText;
+    movieEl.appendChild(movieOverview);
+  });
+}
