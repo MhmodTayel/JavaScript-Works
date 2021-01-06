@@ -46,6 +46,7 @@ function setTime() {
   const month = time.getMonth();
   const day = time.getDay();
   const hours = time.getHours();
+  const date = time.getDate();
   const hoursForClock = hours % 12;
   const minutes = time.getMinutes();
   const seconds = time.getSeconds();
@@ -78,6 +79,8 @@ function setTime() {
   timeEl.innerHTML = `${hoursForClock}:${
     minutes < 10 ? `0${minutes}` : minutes
   } ${ampm}`;
+
+  dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
