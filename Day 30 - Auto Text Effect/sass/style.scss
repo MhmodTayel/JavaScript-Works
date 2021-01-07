@@ -13,4 +13,25 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0; 
+    background-color: darksalmon;
+
+}
+
+div {
+    position: absolute;
+    bottom: 20px;
+    background: rgba($color: #000000, $alpha: .1);
+    padding: 10px 20px;
+    font-size: 18px;
+
+    input {
+        width: 50px;
+        padding: 4px;
+        font-size: 18px;
+        outline: none;
+        background: darksalmon;
+        border: none;
+        text-align: center;
+        
+    }
 }
