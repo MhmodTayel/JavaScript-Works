@@ -75,6 +75,7 @@ body {
   object-fit: cover;
   height: 50px;
   width: 50px;
+  cursor: pointer;
 }
 
 .user-list li .message {
@@ -107,6 +108,11 @@ body {
 
 .user-list .user-info h4 {
   margin: 0 0 10px;
+  cursor: pointer;
+}
+
+.user-list .user-info h4:hover {
+  color: #222;
 }
 
 .user-list .user-info p {
