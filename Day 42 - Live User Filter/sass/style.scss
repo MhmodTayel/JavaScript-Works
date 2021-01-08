@@ -7,10 +7,111 @@
 body {
     font-family: 'Roboto';
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    // overflow: hidden;
+    margin: 0;
+    background-color: #f8f9fd;
+}
+
+.container {
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
     overflow: hidden;
+    width: 300px;
+}
+
+.title {
     margin: 0;
 }
+
+.subtitle {
+    display: inline-block;
+    margin: 5px 0 20px;
+    opacity: .8;
+
+}
+
+.header {
+    background-color: #3e57db;
+    color: #fff;
+    padding: 30px 20px ;
+
+    input {
+        background-color: rgba($color: #000000, $alpha: .3);
+        border: 0;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 100%;
+        outline: none;
+
+    }
+}
+
+.user-list {
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0;
+
+    li {
+        display: flex;
+        padding: 20px;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #eee;
+        }
+
+        &.hide {
+            display: none;
+        }
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            height: 50px;
+            width: 50px;
+        }
+
+        .message {
+            // margin-left: 30px;
+            background-color: #E4E6EB;
+            color: #1E2023;
+            border: 0;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            margin-left: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            line-height: 35px;
+            outline: none;
+            transition: .1s;
+            &:hover {
+                background-color: #cbcccf;
+            }
+        }
+    }
+
+    .user-info {
+        margin-left: 10px;
+
+        h4 {
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
