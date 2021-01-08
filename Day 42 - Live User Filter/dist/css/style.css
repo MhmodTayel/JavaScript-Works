@@ -17,7 +17,7 @@ body {
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 300px;
+  width: 350px;
 }
 
 .title {
@@ -59,6 +59,7 @@ body {
 .user-list li {
   display: flex;
   padding: 20px;
+  position: relative;
 }
 
 .user-list li:not(:last-of-type) {
@@ -92,6 +93,8 @@ body {
   line-height: 35px;
   outline: none;
   transition: .1s;
+  position: absolute;
+  right: 20px;
 }
 
 .user-list li .message:hover {

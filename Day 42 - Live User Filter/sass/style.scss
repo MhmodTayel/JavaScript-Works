@@ -20,7 +20,7 @@ body {
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
     overflow: hidden;
-    width: 300px;
+    width: 350px;
 }
 
 .title {
@@ -63,7 +63,7 @@ body {
     li {
         display: flex;
         padding: 20px;
-
+        position: relative;
         &:not(:last-of-type) {
             border-bottom: 1px solid #eee;
         }
@@ -96,8 +96,11 @@ body {
             line-height: 35px;
             outline: none;
             transition: .1s;
+            position: absolute;
+            right: 20px;
             &:hover {
                 background-color: #cbcccf;
+                
             }
         }
     }
