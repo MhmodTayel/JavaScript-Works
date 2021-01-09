@@ -17,6 +17,9 @@ const colors = {
   normal: "#F5F5F5",
 };
 
+const main_types = Object.keys(colors);
+console.log(main_types);
+
 const fetchPokemons = async () => {
   for (let i = 1; i < pokemon_count; i++) {
     await getPokemon(i);
@@ -33,9 +36,13 @@ const getPokemon = async (id) => {
 const createPokemonCard = (pokemon) => {
   const pokemonEl = document.createElement("div");
   pokemonEl.classList.add("pokemon");
-  const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
-  console.log(pokemon);
-  const id = pokemon.id.toString().padStart(3, '0')
+  const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+
+  const poke_types = pokemon.types.map((type) => type.type.name);
+  const type = main_types.find((type) => poke_types.indexOf(type) > -1);
+  const color = colors[type];
+  const id = pokemon.id.toString().padStart(3, "0");
+
   const pokemonInnerHTML = `
   
   <div class="img-container">
@@ -46,10 +53,12 @@ const createPokemonCard = (pokemon) => {
         </div>
         <div class="info">
           <span class="number">#${id}</span>
-          <h3 class="name">${ name}</h3>
-          <small class="type">Type: <span>grass</span></small>
+          <h3 class="name">${name}</h3>
+          <small class="type">Type: <span>${type}</span></small>
         </div>
   `;
+  pokemonEl.style.backgroundColor = color;
+
   pokemonEl.innerHTML = pokemonInnerHTML;
   poke_container.appendChild(pokemonEl);
 };
