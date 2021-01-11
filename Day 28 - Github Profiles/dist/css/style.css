@@ -71,6 +71,7 @@ body {
   justify-content: space-between;
   padding: 0;
   max-width: 400px;
+  min-width: 300px;
 }
 
 .card .user-info ul li {
@@ -103,4 +104,8 @@ body {
   .user-form {
     max-width: 400px;
   }
+}
+
+h1 {
+  font-weight: 400;
 }
