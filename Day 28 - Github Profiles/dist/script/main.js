@@ -14,8 +14,8 @@ async function getUser(username) {
 
 async function getRepos(username) {
   try {
-    const { data } = await axios(API_URL + username + '/repos');
-    showUser(data);
+    const { data } = await axios(API_URL + username + "/repos");
+    addReposToCard(data);
   } catch (error) {
     createErrorCard("Proplem Fetching Repos");
   }
@@ -26,6 +26,7 @@ form.addEventListener("submit", (e) => {
   const user = search.value;
   if (user) {
     getUser(user);
+    getRepos(user);
     search.value = "";
   }
 });
@@ -41,7 +42,9 @@ function showUser(data) {
     <p>${
       data.bio
         ? data.bio
-        : `Active since: ${new Date(data.created_at).toGMTString()} <br> Full name: ${data.name}`
+        : `Active since: ${new Date(
+            data.created_at
+          ).toGMTString()} <br> Full name: ${data.name}`
     }</p>
     <ul>
       <li>${data.followers} <strong>Followers</strong></li>
@@ -49,14 +52,23 @@ function showUser(data) {
       <li>${data.public_repos} <strong>Repos</strong></li>
     </ul>
     <div id="repos">
-      <a href="#" class="repo">Repo 1</a>
-      <a href="#" class="repo">Repo 2</a>
-      <a href="#" class="repo">Repo 3</a>
     </div>
   </div>
 </div>
   `;
   console.log(data);
+}
+
+function addReposToCard(repos) {
+  const reposEl = document.getElementById("repos");
+  repos.slice(0, 10).forEach((repo) => {
+    const repoEl = document.createElement("a");
+    repoEl.classList.add("repo");
+    repoEl.href = repo.html_url;
+    repoEl.target = "_blank";
+    repoEl.innerText = repo.name;
+    reposEl.appendChild(repoEl);
+  });
 }
 
 function createErrorCard(msg) {
