@@ -76,11 +76,10 @@ clipboardEl.addEventListener("click", () => {
     resultEl.innerText = password;
     resultEl.classList.remove("copy");
   }, 1000);
+
   if (!password) {
     return;
   }
-
-
 
   textarea.value = password;
   document.body.appendChild(textarea);
