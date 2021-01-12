@@ -70,16 +70,21 @@ function generatePassword(lower, upper, number, symbol, length) {
 clipboardEl.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
   const password = resultEl.innerText;
-  const copied = document.createElement('span')
-  copied.innerText = 'Copied to clipboard'
-  copied.classList.add('copy')
+  resultEl.innerText = "Copied to clipboard";
+  resultEl.classList.add("copy");
+  setTimeout(() => {
+    resultEl.innerText = password;
+    resultEl.classList.remove("copy");
+  }, 1000);
   if (!password) {
     return;
   }
+
+
 
   textarea.value = password;
   document.body.appendChild(textarea);
   textarea.select();
   document.execCommand("copy");
-  textarea.remove(); 
+  textarea.remove();
 });

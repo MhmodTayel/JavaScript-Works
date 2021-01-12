@@ -91,3 +91,15 @@ h2 {
 input {
     outline: none;
 }
+
+.copy {
+    background-color: rgba($color: #fff, $alpha: .9);
+    color: green;
+    padding: 10px 20px;
+    display: block;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 30px;
+    // transition: .2s;
+}
