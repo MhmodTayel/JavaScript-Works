@@ -63,8 +63,23 @@ function generatePassword(lower, upper, number, symbol, length) {
       generatedPassword += randomFunc[funcName]();
     });
   }
-  const finalPassword = generatedPassword.slice(0,length)
-  return finalPassword
+  const finalPassword = generatedPassword.slice(0, length);
+  return finalPassword;
 }
 
+clipboardEl.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const password = resultEl.innerText;
+  const copied = document.createElement('span')
+  copied.innerText = 'Copied to clipboard'
+  copied.classList.add('copy')
+  if (!password) {
+    return;
+  }
 
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove(); 
+});
