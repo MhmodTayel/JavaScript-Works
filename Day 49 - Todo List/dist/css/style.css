@@ -21,7 +21,6 @@ h1 {
   text-align: center;
   opacity: .4;
   font-weight: normal;
-  display: none;
 }
 
 form {
@@ -37,6 +36,10 @@ form {
   padding: 1rem 2rem;
   display: block;
   width: 100%;
+}
+
+.input:focus {
+  outline-color: #b383e2;
 }
 
 .input::placeholder {
@@ -60,4 +63,10 @@ form {
 .todos li.completed {
   color: #b6b6b6;
   text-decoration: line-through;
+}
+
+small {
+  color: #b6b6b6;
+  margin-top: 3rem;
+  text-align: center;
 }

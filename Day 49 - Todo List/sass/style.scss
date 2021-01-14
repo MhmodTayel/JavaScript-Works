@@ -23,7 +23,7 @@ h1 {
     text-align: center;
     opacity: .4;
     font-weight: normal;
-    display: none;
+    // display: none;
 }
 
 form {
@@ -39,7 +39,10 @@ form {
     padding: 1rem 2rem;
     display: block;
     width: 100%;
-
+    
+    &:focus {
+        outline-color: rgb(179,131,226);
+    }
     &::placeholder {
         color: #d5d5d5;
     }
@@ -64,4 +67,10 @@ form {
         }
         
     }
+}
+
+small {
+    color: #b6b6b6;
+    margin-top: 3rem;
+    text-align: center;
 }
