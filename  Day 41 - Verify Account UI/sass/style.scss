@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli';
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #fbfcfe;
+}
+
