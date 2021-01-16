@@ -6,6 +6,8 @@ const username = document.querySelector(".username");
 const role = document.querySelector(".role");
 const bar = document.querySelector(".progress-bar");
 
+let tmr = true;
+
 const testimonials = [
   {
     name: "Miyah Myles",
@@ -70,20 +72,25 @@ function updateTestimonial() {
 }
 
 setInterval(() => {
-  updateTestimonial();
-  idx++;
-  if (idx > testimonials.length - 1) idx = 1;
+  if (tmr) {
+    updateTestimonial();
+    idx++;
+    if (idx > testimonials.length - 1) idx = 1;
+  }
 }, 10000);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === " ") {
+    tmr = false;
     bar.style.webkitAnimationPlayState = "paused";
+
   }
 });
 
 document.addEventListener("keyup", (e) => {
   if (e.key === " ") {
+    tmr = true;
     bar.style.webkitAnimationPlayState = "running";
+
   }
 });
-  
