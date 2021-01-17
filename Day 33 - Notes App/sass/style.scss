@@ -1,16 +1,102 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // height: 100vh;
+    // overflow: hidden;
     margin: 0;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    background-color: #7bdaf3;
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #9ec862;
+    border: none;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: .1s;
+    font-size: 1rem;
+    // text-transform: uppercase;
+    font-family: inherit;
+    &:hover {
+        transform: scale(1.08);
+
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.note {
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba($color: #000000, $alpha: .1);
+    margin: 30px 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+
+    .tools {
+        background-color: #9ec862;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: .5rem;
+            margin-top: .2rem;
+            outline: none;
+
+            &:hover {
+                transform: scale(1.08);
+            }
+            &:active {
+                transform: translateY(1px);
+            }
+
+            &.delete {
+                color: rgb(224, 53, 53);
+                
+            }
+        }
+
+    }
+
+
+    textarea {
+        outline: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: none;
+        height: 400px;
+        width: 100%;
+        padding: 20px;
+        
+    }
+}
+
+.hidden {
+    display: none;
 }
