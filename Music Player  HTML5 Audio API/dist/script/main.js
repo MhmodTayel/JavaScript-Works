@@ -81,3 +81,5 @@ function setProgress(e) {
   const duration = audio.duration;
   audio.currentTime = (clickX / width) * duration;
 }
+
+// Quran
