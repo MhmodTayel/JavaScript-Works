@@ -49,7 +49,7 @@ function addNewNote(text = "") {
     }
   });
 
-
-
   document.body.appendChild(note);
 }
+
+// Next => Add Local Storage
