@@ -5,7 +5,10 @@
 
 body {
   font-family: 'Lato';
-  background-image: linear-gradient(0deg, #f7f7f7 23.8%, #fcdddd 92%);
+  background-image: url("cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,15 +17,21 @@ body {
   margin: 0;
 }
 
-.music-container {
+.quran-container {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  box-shadow: 0 20px 20px 0 rgba(182, 231, 20, 0.267);
   display: flex;
   padding: 20px 30px;
   position: relative;
   margin: 100px 0;
   z-index: 10;
+}
+
+h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-top: -90px;
 }
 
 .img-container {
@@ -54,7 +63,7 @@ body {
   animation-play-state: paused;
 }
 
-.music-container.play .img-container img {
+.quran-container.play .img-container img {
   animation-play-state: running;
 }
 
@@ -90,7 +99,7 @@ body {
   font-size: 30px;
 }
 
-.music-info {
+.quran-info {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0 0;
   position: absolute;
@@ -104,11 +113,11 @@ body {
   padding: 10px 10px 10px 150px;
 }
 
-.music-info h4 {
+.quran-info h4 {
   margin: 0;
 }
 
-.music-container.play .music-info {
+.quran-container.play .quran-info {
   opacity: 1;
   transform: translateY(-100%);
 }
