@@ -15,6 +15,15 @@ function getMealById(mealID) {
     });
 }
 
+function getRandomMeal() {
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+
+      addMealToDOM(meal);
+    });
+}
 function addMealToDOM(meal) {
   const ingredients = [];
 
@@ -40,7 +49,7 @@ function addMealToDOM(meal) {
   <p>${meal.strInstructions}</p>
   <h2>Ingredients</h2>
   <ul>
-  ${ingredients.map((ing) => `<li>${ing}</li>`).join('')}
+  ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
   </ul>
   </div>
   </div>
@@ -101,3 +110,5 @@ mealsEl.addEventListener("click", (e) => {
     getMealById(mealID);
   }
 });
+
+random.addEventListener("click", getRandomMeal);
