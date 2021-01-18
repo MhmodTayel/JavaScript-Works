@@ -72,6 +72,27 @@ input[type="text"] {
   width: 100%;
   height: 100%;
   border: 4px solid #fff;
+  border-radius: 4px;
+}
+
+.meal .meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .2s ease-in;
+  word-wrap: break-word;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1;
 }
 
 @media (max-width: 500px) {
