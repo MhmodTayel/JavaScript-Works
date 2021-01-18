@@ -60,6 +60,20 @@ input[type="text"] {
   margin-top: 20px;
 }
 
+.meal {
+  cursor: pointer;
+  position: relative;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+}
+
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+}
+
 @media (max-width: 500px) {
   input[type="text"] {
     width: 100px;
