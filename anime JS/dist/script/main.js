@@ -5,6 +5,12 @@ anime({
   scale: 2,
   duration: 3000,
   loop: true,
+  keyframes: [
+    { translateX: 700 },
+    { translateY: 50 },
+    { translateX: 100 },
+    { translateY: -50 },
+  ],
 });
 
 anime({
