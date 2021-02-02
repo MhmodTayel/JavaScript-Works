@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #224941 url("../img/bg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  transform: scale(1);
+}
+
+.container .circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container .gradient-circle {
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: conic-gradient(#55b7a4 0%, #4ca493 40%, #fff 40%, #fff 60%, #336d62 60%, #2a5b52 100%);
+}
+
+.container .gradient-circle.breatheIn {
+  background: conic-gradient(#55b7a4 0%, #4ca493 40%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(42, 91, 82, 0.5) 60%, rgba(42, 91, 82, 0.5) 100%);
+}
+
+.container .gradient-circle.hold {
+  background: conic-gradient(rgba(85, 183, 164, 0.5) 0%, rgba(85, 183, 164, 0.5) 40%, #fff 40%, #fff 60%, rgba(42, 91, 82, 0.5) 60%, rgba(42, 91, 82, 0.5) 100%);
+}
+
+.container .gradient-circle.breatheOut {
+  background: conic-gradient(rgba(85, 183, 164, 0.5) 0%, rgba(85, 183, 164, 0.5) 40%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.5) 60%, #55b7a4 60%, #55b7a4 100%);
+}
+
+.container .pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: animate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+.container .pointer-container .pointer {
+  background: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}

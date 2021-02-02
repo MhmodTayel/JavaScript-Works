@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 10px 50px;
+  text-align: center;
+  width: 50%;
+  min-width: 600px;
+}
+
+.container .heading {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #222;
+}
+
+.input-field {
+  margin: 15px 5px;
+}
+
+.input-field label {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.input-field .btn {
+  background-color: transparent;
+  cursor: pointer;
+  transition: .2s;
+  margin-top: 30px;
+}
+
+.input-field .btn:hover {
+  transform: translateY(-1px);
+}
+
+.input-field .btn:active {
+  transform: translateY(1px);
+}
+
+.delete {
+  color: red;
+  text-decoration: none;
+  transition: .2s;
+  transition: .5s;
+}
+
+.delete i {
+  transition: .5s;
+  font-size: 18px;
+}
+
+.delete i:hover {
+  transition: .5s;
+  transform: rotate(180deg);
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+table td, table th:not(:last-child) {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+table th:last-child {
+  border-bottom: 1px solid #dddddd;
+  text-align: right;
+}
+
+table td:last-child {
+  text-align: center;
+}
+
+.alert {
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+  border-radius: 2px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-error {
+  background-color: red;
+}

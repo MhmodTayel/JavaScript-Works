@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.anime {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(58, 61, 58) !important;
+  border-radius: 10px;
+}
