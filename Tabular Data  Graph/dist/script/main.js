@@ -7,11 +7,48 @@ async function getData() {
 getData();
 
 function modifyData(data) {
-  const rows = data.split("\n").slice(1);
-  rows.forEach((element) => {
-    const row = element.split(",");
-    const year = row[0];
-    const temp = row[1];
+  const tabel = data.split("\n").slice(1);
+  let xlabels = [];
+  let ytemps = [];
+  tabel.forEach((row) => {
+    const columns = row.split(",");
+    const year = columns[0];
+    xlabels.push(year);
+    const temp = columns[1];
+    ytemps.push(+temp + 14);
     console.log(year, temp);
+  });
+  drawChart(xlabels, ytemps);
+}
+
+function drawChart(xlabels, ytemps) {
+  var ctx = document.getElementById("chart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: xlabels,
+      datasets: [
+        {
+          label: "Global Average Temperature",
+          data: ytemps,
+          backgroundColor: "rgba(255, 99, 132, 0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          borderWidth: 1,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: false,
+            },
+          },
+        ],
+      },
+      responsive: false,
+    },
   });
 }
