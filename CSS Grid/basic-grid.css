@@ -1,0 +1,8 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  /* this will overflow */
+  /* grid-template-columns: repeat(12, minmax(240px,1fr)); */
+  /* Right Fitting */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
