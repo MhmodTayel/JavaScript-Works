@@ -11,7 +11,10 @@ const newYearTime = new Date(`January 01 ${currentYear + 1}   00:00:00`);
 
 function updateCountdown() {
   const currentTime = new Date();
-  const diff = newYearTime - currentTime;
+  const test = new Date(2021, 5, 28, 13, 00, 00, 0);
+  const diff = test - currentTime;
+
+  // console.log(diff, newYearTime, test);
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -38,7 +41,7 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 
-year.innerText = `${newYearTime.getFullYear()}`;
+// year.innerText = `${newYearTime.getFullYear()}`;
 countdown.style.display = "none";
 year.style.display = "none";
 
@@ -46,6 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     countdown.style.display = "flex";
     year.style.display = "block";
-    loading.style.display= 'none'
+    loading.style.display = "none";
   }, 1000);
 });
