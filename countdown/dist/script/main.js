@@ -3,6 +3,7 @@ const days = document.getElementById("days");
 const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
+const audio = document.getElementById("audio");
 const countdown = document.getElementById("countdown");
 const loading = document.getElementById("loading");
 
@@ -42,7 +43,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 // year.innerText = `${newYearTime.getFullYear()}`;
-countdown.style.display = "none";
+countdown.style.display = "none !important";
 year.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -50,5 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     countdown.style.display = "grid ";
     year.style.display = "block";
     loading.style.display = "none";
+    audio.autoplay = true;
   }, 1000);
 });
