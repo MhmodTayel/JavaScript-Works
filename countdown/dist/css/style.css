@@ -45,8 +45,9 @@ h1 {
 }
 
 .countdown {
-  display: flex !important;
+  display: none;
   transform: scale(2);
+  grid-template-columns: repeat(4,1fr);
 }
 
 .countdown .time {
@@ -79,7 +80,7 @@ h1 {
   .countdown {
     display: grid  !important;
     margin-top: 40px;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr) !important;
   }
 
   #heading {
@@ -101,3 +102,25 @@ h1 {
 }
 
 
+.social {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  z-index: 100000;
+  display: flex;
+}
+.social a {
+  width: 55px;
+  display: block;
+  margin: 10px;
+}
+.social a img {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  
+}
+
+.social a.github img{
+  
+}

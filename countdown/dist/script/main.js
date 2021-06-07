@@ -43,12 +43,13 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 // year.innerText = `${newYearTime.getFullYear()}`;
-countdown.style.display = "none !important";
+// countdown.style.display = "none !important";
 year.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     countdown.style.display = "grid ";
+    countdown.style.gridTemplateColumns = "repeat(4,1fr)";
     year.style.display = "block";
     loading.style.display = "none";
     audio.autoplay = true;
