@@ -83,6 +83,18 @@ h1 {
     grid-template-columns: repeat(2,1fr) !important;
   }
 
+  .social a {
+    width: 30px;
+    display: block;
+    margin: 5px;
+  }
+  .social {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+
+  }
+
   #heading {
     margin-top: 80px;
   }
