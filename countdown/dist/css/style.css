@@ -84,14 +84,14 @@ h1 {
   }
 
   .social a {
-    width: 30px;
+    width: 30px !important;
     display: block;
-    margin: 5px;
+    margin: 5px !important;
   }
   .social {
     position: absolute;
-    bottom: 10px;
-    left: 5px;
+    bottom: 10px !important;
+    left: 5px !important;
 
   }
 
