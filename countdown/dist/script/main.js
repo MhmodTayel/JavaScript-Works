@@ -46,9 +46,9 @@ countdown.style.display = "none";
 year.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
-  countdown.style.display = "none ";
+  countdown.style.display = "none !important";
   setTimeout(() => {
-    countdown.style.display = "flex";
+    countdown.style.display = "flex ";
     year.style.display = "block";
     loading.style.display = "none";
   }, 1000);
