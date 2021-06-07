@@ -45,7 +45,7 @@ h1 {
 }
 
 .countdown {
-  display: flex;
+  display: grid !important;
   transform: scale(2);
 }
 
@@ -74,6 +74,11 @@ h1 {
   }
   .time small {
     font-size: 10px;
+  }
+
+  .countdown {
+    margin-top: 40px;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
