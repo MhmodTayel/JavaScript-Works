@@ -8,7 +8,7 @@ const loading = document.getElementById("loading");
 
 const currentYear = new Date().getFullYear();
 const newYearTime = new Date(`January 01 ${currentYear + 1}   00:00:00`);
-
+countdown.style.display = "flex !important";
 function updateCountdown() {
   const currentTime = new Date();
   const test = new Date(2021, 5, 28, 13, 00, 00, 0);
@@ -46,9 +46,8 @@ countdown.style.display = "none";
 year.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
-  countdown.style.display = "none !important";
   setTimeout(() => {
-    countdown.style.display = "flex ";
+    countdown.style.display = "grid ";
     year.style.display = "block";
     loading.style.display = "none";
   }, 1000);
