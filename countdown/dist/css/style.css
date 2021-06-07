@@ -78,7 +78,7 @@ h1 {
   }
 
   .countdown {
-    display: grid  !important;
+    display: none ;
     margin-top: 40px;
     grid-template-columns: repeat(2,1fr) !important;
   }
