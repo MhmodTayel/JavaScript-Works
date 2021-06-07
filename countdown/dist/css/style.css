@@ -61,7 +61,7 @@ h1 {
   margin: 0 0 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   h1 {
     font-size: 45px;
   }
@@ -84,3 +84,5 @@ h1 {
   text-align: center;
   opacity: .7;
 }
+
+
