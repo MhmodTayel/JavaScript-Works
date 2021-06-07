@@ -9,13 +9,13 @@
 body {
   position: relative;
   /* background-image: url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"); */
-  background-image: url('./preview\ \(1\).jpg');
+  background-image: url("./preview\ \(2\).jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: #fff;
-  font-family: 'Lato', cursive;
+  font-family: "Lato", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,8 +48,7 @@ h1 {
 .countdown {
   display: none;
   transform: scale(2);
-  grid-template-columns: repeat(4,1fr);
-
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .countdown .time {
@@ -72,7 +71,7 @@ h1 {
     margin: 5px;
   }
   .time h2 {
-    font-size: 12px;
+    font-size: 18px;
     margin: 0;
   }
   .time small {
@@ -80,9 +79,9 @@ h1 {
   }
 
   .countdown {
-    display: none ;
+    display: none;
     margin-top: 40px;
-    grid-template-columns: repeat(2,1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .social a {
@@ -94,7 +93,6 @@ h1 {
     position: absolute;
     bottom: 10px !important;
     left: 5px !important;
-
   }
 
   #heading {
@@ -112,9 +110,8 @@ h1 {
   font-size: 120px;
   margin-top: 400px;
   text-align: center;
-  opacity: .7;
+  opacity: 0.7;
 }
-
 
 .social {
   position: absolute;
@@ -132,9 +129,7 @@ h1 {
   width: 100%;
   background-color: #fff;
   border-radius: 50%;
-  
 }
 
-.social a.github img{
-  
+.social a.github img {
 }
