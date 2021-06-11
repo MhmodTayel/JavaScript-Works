@@ -65,7 +65,7 @@ h1 {
 
 @media (max-width: 700px) {
   h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .time {
     margin: 5px;
@@ -80,7 +80,7 @@ h1 {
 
   .countdown {
     display: none;
-    margin-top: 40px;
+    margin-top: 60px;
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
