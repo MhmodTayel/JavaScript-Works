@@ -9,10 +9,10 @@
 body {
   position: relative;
   /* background-image: url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"); */
-  background-image: url("./preview\ \(2\).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url("./44.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  background-position: 0;
   height: 100vh;
   color: #fff;
   font-family: "Lato", cursive;
@@ -102,6 +102,7 @@ h1 {
   body {
     background-position: top;
     background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
