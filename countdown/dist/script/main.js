@@ -39,7 +39,7 @@ function updateCountdown() {
     seconds.innerHTML = s;
   }
 
-  if (h === 20 && m === 0) {
+  if (h === 0 && m === 0) {
     document.body.innerHTML = "";
     document.body.style.backgroundImage = 'url("./css/done.jpg")';
   }
