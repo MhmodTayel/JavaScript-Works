@@ -15,7 +15,7 @@ function updateCountdown() {
   const test = new Date(2021, 5, 28, 13, 00, 00, 0);
   const diff = test - currentTime;
 
-  // console.log(diff, newYearTime, test);
+  console.log(diff, test);
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -37,6 +37,11 @@ function updateCountdown() {
     seconds.innerHTML = `0${s}`;
   } else {
     seconds.innerHTML = s;
+  }
+
+  if (h === 20 && m === 0) {
+    document.body.innerHTML = "";
+    document.body.style.backgroundImage = 'url("./css/done.jpg")';
   }
 }
 
