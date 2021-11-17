@@ -12,7 +12,7 @@ const newYearTime = new Date(`January 01 ${currentYear + 1}   00:00:00`);
 countdown.style.display = "flex !important";
 function updateCountdown() {
   const currentTime = new Date();
-  const test = new Date(2021, 5, 28, 13, 00, 00, 0);
+  const test = new Date(2021, 12, 28, 13, 00, 00, 0);
   const diff = test - currentTime;
 
   console.log(diff, test);
